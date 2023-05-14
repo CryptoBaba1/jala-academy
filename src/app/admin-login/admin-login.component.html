@@ -1,0 +1,54 @@
+<div class="admin-login-page">
+  <div class="admin-login-page-form">
+    <h2>Sign In</h2>
+    <form [formGroup]="adminLoginForm" (ngSubmit)="onSubmit()">
+      <label>Email</label>
+      <input
+        type="text"
+        placeholder="Enter your Email id"
+        formControlName="email"
+      />
+      <div
+        style="color: red"
+        *ngIf="
+          adminLoginForm.get('email')?.invalid &&
+          (adminLoginForm.get('email')?.dirty ||
+            adminLoginForm.get('email')?.touched)
+        "
+      >
+        <div *ngIf="adminLoginForm.get('email')?.errors?.['required']">
+          Email is required
+        </div>
+        <div *ngIf="adminLoginForm.get('email')?.errors?.['email']">
+          Invalid email format.
+        </div>
+      </div>
+      <label>Password</label>
+      <input
+        type="password"
+        placeholder="password"
+        formControlName="password"
+      />
+      <div
+        style="color: red"
+        *ngIf="
+          adminLoginForm.get('password')?.invalid &&
+          (adminLoginForm.get('password')?.dirty ||
+            adminLoginForm.get('password')?.touched)
+        "
+      >
+        <div *ngIf="adminLoginForm.get('password')?.errors?.['required']">
+          Password is required
+        </div>
+        <div *ngIf="adminLoginForm.get('password')?.errors?.['minlength']">
+          Password should be at least 6 characters
+        </div>
+      </div>
+
+      <div class="admin-login-page-form-footer">
+        <a href="/login">Back</a>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
