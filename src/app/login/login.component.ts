@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  constructor(private router: Router) {}
   loginForm = new FormGroup({
     email: new FormControl('', [
       Validators.required,
@@ -21,5 +23,6 @@ export class LoginComponent {
   onSubmit() {
     console.log(this.loginForm.get('email'));
     console.log(this.loginForm.get('password'));
+    this.router.navigate(['/home']);
   }
 }
