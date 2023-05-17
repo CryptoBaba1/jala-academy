@@ -7,5 +7,20 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
+  showEmployeeSubMenu = false;
+  showMoreSubMenu = false;
+  showSettingsSubMenu = false;
+
+  toggleEmployeeSubMenu() {
+    this.showEmployeeSubMenu = !this.showEmployeeSubMenu;
+  }
+
+  toggleMoreSubMenu() {
+    this.showMoreSubMenu = !this.showMoreSubMenu;
+  }
+
+  toggleSettingsSubMenu() {
+    this.showSettingsSubMenu = !this.showSettingsSubMenu;
+  }
 
 }

@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { DashboardContentComponent } from './dashboard-content/dashboard-content.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     HomeComponent,
     NavbarComponent,
     SidenavComponent,
+    DashboardContentComponent,
   ],
   imports: [
     BrowserModule,
