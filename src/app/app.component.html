@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<diV *ngIf="!openHomePage">
+  <app-login (loginSuccess)="loginSuccess()"></app-login>
+</diV>
+<div *ngIf="openHomePage">
+  <div class="cointainer-header">
+    <app-navbar (logOut)="logOut()"></app-navbar>
+  </div>
+  <div class="cointainer">
+    <app-sidenav></app-sidenav>
+    <app-home></app-home>
+  </div>
+</div>

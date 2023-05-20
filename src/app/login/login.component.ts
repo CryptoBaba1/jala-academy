@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  @Output() loginSuccess = new EventEmitter<string>();
   constructor(private router: Router) {}
   loginForm = new FormGroup({
     email: new FormControl('', [
@@ -21,8 +22,7 @@ export class LoginComponent {
   });
 
   onSubmit() {
-    console.log(this.loginForm.get('email'));
-    console.log(this.loginForm.get('password'));
-    this.router.navigate(['/home']);
+    this.loginSuccess.emit('success');
+    this.router.navigate(['/dashboard']);
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,9 +9,11 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
 
   constructor(private router: Router) {}
+  @Output() logOut = new EventEmitter<string>();
 
   logout() {
-    this.router.navigate(['/']);
+    this.logOut.emit('logout');
+    this.router.navigate(['/login']);
   }
 
 }

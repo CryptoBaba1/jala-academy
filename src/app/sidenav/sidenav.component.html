@@ -1,86 +1,98 @@
 <aside class="side-nav">
-  <button mat-button>
-    <mat-icon>perm_identity</mat-icon>
-    Guest Login
-  </button>
-  <button mat-button>
-    <mat-icon>home</mat-icon>
-    Home
-  </button>
-  <button mat-button (click)="toggleEmployeeSubMenu()">
-    <mat-icon>groups</mat-icon> Employee
-    <span><mat-icon>keyboard_arrow_left</mat-icon></span>
-  </button>
-  <div class="sub-menu" *ngIf="showEmployeeSubMenu">
+  <div class="user-profile">
+    <!-- <div class="user-profile__avatar">
+      <img src="assets/img/user-avatar.png" class="user-profile__avatar-img" /> -->
     <button mat-button>
-      <mat-icon>edit</mat-icon>
-      Create
-    </button>
-    <button mat-button>
-      <mat-icon>search</mat-icon>
-      Search
+      <mat-icon>perm_identity</mat-icon>
+      Guest Login
     </button>
   </div>
-  <button mat-button (click)="toggleMoreSubMenu()">
-    <mat-icon>view_list</mat-icon>
-    More
-    <span><mat-icon>keyboard_arrow_left</mat-icon></span>
-  </button>
-  <div class="sub-menu" *ngIf="showMoreSubMenu">
+  <div class="home-button" routerLink="/dashboard">
     <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Multiple Tabs
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Menu
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Autocomplete
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Collapisble
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Images
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Slider
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Tooltips
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Popups
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      Links
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      CSS properties
-    </button>
-    <button mat-button>
-      <mat-icon>touch_app</mat-icon>
-      iFrames
+      <mat-icon>home</mat-icon>
+      Home
     </button>
   </div>
-  <button mat-button (click)="toggleSettingsSubMenu()">
-    <mat-icon>settings</mat-icon>
-    Settings
-    <span>
-      <mat-icon>keyboard_arrow_left</mat-icon>
-    </span>
-  </button>
-  <div class="sub-menu" *ngIf="showSettingsSubMenu">
-    <button mat-button>General Settings</button>
-    <button mat-button>Adv Settings</button>
+  <div class="employee-section">
+    <button mat-button (click)="toggleEmployeeSubMenu()">
+      <mat-icon>groups</mat-icon> Employee
+      <span><mat-icon>keyboard_arrow_left</mat-icon></span>
+    </button>
+    <div class="sub-menu" *ngIf="showEmployeeSubMenu">
+      <button mat-button routerLink="/register">
+        <mat-icon>edit</mat-icon>
+        Create
+      </button>
+      <button mat-button>
+        <mat-icon>search</mat-icon>
+        Search
+      </button>
+    </div>
+  </div>
+  <div class="more-section">
+    <button mat-button (click)="toggleMoreSubMenu()">
+      <mat-icon>view_list</mat-icon>
+      More
+      <span><mat-icon>keyboard_arrow_left</mat-icon></span>
+    </button>
+    <div class="sub-menu" *ngIf="showMoreSubMenu">
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Multiple Tabs
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Menu
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Autocomplete
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Collapisble
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Images
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Slider
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Tooltips
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Popups
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        Links
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        CSS properties
+      </button>
+      <button mat-button>
+        <mat-icon>touch_app</mat-icon>
+        iFrames
+      </button>
+    </div>
+  </div>
+  <div class="settings-section">
+    <button mat-button (click)="toggleSettingsSubMenu()">
+      <mat-icon>settings</mat-icon>
+      Settings
+      <span>
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </span>
+    </button>
+    <div class="sub-menu" *ngIf="showSettingsSubMenu">
+      <button mat-button>General Settings</button>
+      <button mat-button>Adv Settings</button>
+    </div>
   </div>
 </aside>
