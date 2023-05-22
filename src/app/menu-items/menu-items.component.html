@@ -1,0 +1,33 @@
+<div class="menu-items">
+  <div class="multiple-tabs">
+    <mat-tab-group>
+      <mat-tab *ngFor="let item of data" [label]="item.title">
+        <div class="menu-conitainer">
+          <div class="menu-buttons">
+            <button
+              mat-flat-button
+              color="primary"
+              *ngFor="let menu of item.menus"
+              (mouseenter)="showSubmenus(menu)"
+              (click)="selectMenu(menu.title)"
+              [class.active]="selectedMenu === menu.title"
+            >
+              {{ menu.title }}
+            </button>
+          </div>
+          <div class="menu-details">
+            <p>You Selected this option: {{ selectedMenu }}</p>
+            <ul
+              class="submenu-list"
+              *ngIf="selectedMenu && selectedMenuSubmenus.length"
+            >
+              <li *ngFor="let submenu of selectedMenuSubmenus">
+                {{ submenu }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

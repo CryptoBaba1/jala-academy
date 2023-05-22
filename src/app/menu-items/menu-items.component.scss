@@ -1,0 +1,21 @@
+.menu-items {
+    background-color: azure;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 40%;
+    left: 14%;
+    .menu-container  {
+        display: flex;
+    }
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+

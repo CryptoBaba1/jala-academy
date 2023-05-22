@@ -22,6 +22,15 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardContentComponent } from './dashboard-content/dashboard-content.component';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MultipleTabsComponent } from './multiple-tabs/multiple-tabs.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { MenuItemsComponent } from './menu-items/menu-items.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { SliderComponent } from './slider/slider.component';
+import {MatSliderModule} from '@angular/material/slider';
+import { TooltipsComponent } from './tooltips/tooltips.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { PopupsComponent } from './popups/popups.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +44,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     NavbarComponent,
     SidenavComponent,
     DashboardContentComponent,
+    MultipleTabsComponent,
+    MenuItemsComponent,
+    SliderComponent,
+    TooltipsComponent,
+    PopupsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +65,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatNativeDateModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
+    MatTabsModule,
+    MatMenuModule,
+    MatSliderModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

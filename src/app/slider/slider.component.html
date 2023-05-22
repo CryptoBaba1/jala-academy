@@ -1,0 +1,13 @@
+<div class="slider-container">
+  <div>
+    <mat-tab-group style="flex-grow: 0">
+      <mat-tab label="Slider"></mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="mat-slider-container">
+    <mat-slider>
+      <input matSliderThumb [(ngModel)]="sliderValue" />
+    </mat-slider>
+    <p>Slider Value: {{ sliderValue }}</p>
+  </div>
+</div>

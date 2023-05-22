@@ -1,0 +1,14 @@
+<div class="popups-container">
+  <div>
+    <mat-tab-group>
+      <mat-tab label="Popups"></mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="popups-buttons">
+    <div class="popup-row" *ngFor="let popup of popups; let i = index">
+      <button mat-flat-button color="primary">
+        {{ popup.title }}
+      </button>
+    </div>
+  </div>
+</div>

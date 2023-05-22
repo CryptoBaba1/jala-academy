@@ -1,0 +1,9 @@
+<div class="mutliple-tabs">
+  <mat-tab-group>
+    <mat-tab *ngFor="let item of data" [label]="item.title">
+      <ng-template matTabContent>
+        <p>{{ item.content }}</p>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>
