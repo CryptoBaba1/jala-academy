@@ -1,0 +1,36 @@
+<div class="links-container">
+    <div>
+      <mat-tab-group>
+        <mat-tab label="Working Links">
+          <div class="inline-links">
+            <div *ngFor="let link of workingLinks; let i = index">
+              <a [href]="link.link" [ngStyle]="{ 'color': getColor(i) }">{{ link.title }}</a>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Broken Links">
+          <div class="inline-links">
+            <div *ngFor="let link of workingLinks; let i = index">
+              <a [href]="link.link" [ngStyle]="{ 'color': getColor(i) }">{{ link.title }}</a>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Image Links">
+          <div class="inline-links">
+            <a href="https://www.google.com"><img src="https://w7.pngwing.com/pngs/326/85/png-transparent-google-logo-google-text-trademark-logo-thumbnail.png" alt="Google"></a>
+            <a href="https://www.linkedin.com"><img src="https://w7.pngwing.com/pngs/602/665/png-transparent-in-icon-social-media-linkedin-computer-icons-linkedin-blue-text-trademark-thumbnail.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com"><img src="https://w7.pngwing.com/pngs/282/704/png-transparent-facebook-messenger-logo-icon-facebook-facebook-logo-blue-text-trademark-thumbnail.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com"><img src="https://w7.pngwing.com/pngs/708/311/png-transparent-icon-logo-twitter-logo-twitter-logo-blue-social-media-area-thumbnail.png" alt="Twitter"></a>
+          </div>
+        </mat-tab>
+        <mat-tab label="Status Codes">
+          <div class="inline-links">
+            <div *ngFor="let link of statusCodes">
+              <a [href]="link.link">{{ link.title }}</a>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+  

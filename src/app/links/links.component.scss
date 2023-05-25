@@ -1,0 +1,21 @@
+.links-container {
+    background-color: azure;
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    position: absolute;
+    top: 25%;
+    left: 14%;
+    align-items: centre;
+    text-align: centre;
+
+    .inline-links {
+        display:flex;
+        justify-content: space-evenly;
+        margin-top: 35px;
+    }
+}
+
+img {
+    width: 40px;
+}

@@ -6,7 +6,7 @@
   </div>
   <div class="popups-buttons">
     <div class="popup-row" *ngFor="let popup of popups; let i = index">
-      <button mat-flat-button color="primary">
+      <button mat-flat-button color="primary" (click)="popup.handler()">
         {{ popup.title }}
       </button>
     </div>

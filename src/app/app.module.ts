@@ -31,6 +31,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { PopupsComponent } from './popups/popups.component';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { PopupsComponent } from './popups/popups.component';
     SliderComponent,
     TooltipsComponent,
     PopupsComponent,
+    LinksComponent,
   ],
   imports: [
     BrowserModule,

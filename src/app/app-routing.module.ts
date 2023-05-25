@@ -11,6 +11,7 @@ import { PopupsComponent } from './popups/popups.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { SliderComponent } from './slider/slider.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
+import { LinksComponent } from './links/links.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'login', pathMatch: 'full'},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'slider', component: SliderComponent},
   {path: 'tooltips', component: TooltipsComponent},
   {path:'popups', component: PopupsComponent},
+  {path:'links', component:LinksComponent},
   {path: '**', component: PageNotFoundComponent},
 ];
 
